@@ -1,0 +1,48 @@
+[debug] [2020-04-11T13:58:17.889Z] ----------------------------------------------------------------------
+[debug] [2020-04-11T13:58:17.891Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-04-11T13:58:17.891Z] CLI Version:   8.0.2
+[debug] [2020-04-11T13:58:17.891Z] Platform:      win32
+[debug] [2020-04-11T13:58:17.891Z] Node Version:  v12.16.1
+[debug] [2020-04-11T13:58:17.892Z] Time:          Sat Apr 11 2020 16:58:17 GMT+0300 (GMT+03:00)
+[debug] [2020-04-11T13:58:17.892Z] ----------------------------------------------------------------------
+[debug] [2020-04-11T13:58:17.892Z] 
+[debug] [2020-04-11T13:58:17.900Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-11T13:58:17.925Z] Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+    at GoogleAuth.getApplicationDefaultAsync (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async GoogleAuth.getClient (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\google-auth-library\build\src\auth\googleauth.js:502:17)
+    at async GoogleAuth.getAccessToken (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\google-auth-library\build\src\auth\googleauth.js:524:24)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2020-04-11T13:58:31.928Z] ----------------------------------------------------------------------
+[debug] [2020-04-11T13:58:31.930Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-04-11T13:58:31.930Z] CLI Version:   8.0.2
+[debug] [2020-04-11T13:58:31.930Z] Platform:      win32
+[debug] [2020-04-11T13:58:31.930Z] Node Version:  v12.16.1
+[debug] [2020-04-11T13:58:31.931Z] Time:          Sat Apr 11 2020 16:58:31 GMT+0300 (GMT+03:00)
+[debug] [2020-04-11T13:58:31.931Z] ----------------------------------------------------------------------
+[debug] [2020-04-11T13:58:31.931Z] 
+[debug] [2020-04-11T13:58:31.939Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-11T13:58:31.959Z] Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+    at GoogleAuth.getApplicationDefaultAsync (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async GoogleAuth.getClient (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\google-auth-library\build\src\auth\googleauth.js:502:17)
+    at async GoogleAuth.getAccessToken (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\google-auth-library\build\src\auth\googleauth.js:524:24)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2020-04-11T13:58:40.123Z] ----------------------------------------------------------------------
+[debug] [2020-04-11T13:58:40.125Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-04-11T13:58:40.125Z] CLI Version:   8.0.2
+[debug] [2020-04-11T13:58:40.125Z] Platform:      win32
+[debug] [2020-04-11T13:58:40.125Z] Node Version:  v12.16.1
+[debug] [2020-04-11T13:58:40.126Z] Time:          Sat Apr 11 2020 16:58:40 GMT+0300 (GMT+03:00)
+[debug] [2020-04-11T13:58:40.126Z] ----------------------------------------------------------------------
+[debug] [2020-04-11T13:58:40.126Z] 
+[debug] [2020-04-11T13:58:40.134Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-11T13:58:40.157Z] Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+    at GoogleAuth.getApplicationDefaultAsync (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async GoogleAuth.getClient (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\google-auth-library\build\src\auth\googleauth.js:502:17)
+    at async GoogleAuth.getAccessToken (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\google-auth-library\build\src\auth\googleauth.js:524:24)
+[error] 
+[error] Error: An unexpected error has occurred.

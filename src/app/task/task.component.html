@@ -1,0 +1,16 @@
+
+<input type="text" id= "inputTask" placeholder="Add New Todo" #input (keyup.enter)="create(input)">
+<ul class="list-group">
+    <li *ngFor = "let task of tasks" class='customList'>
+        <span class='delete' (click)="delete(task.id)"><i class='far fa-trash-alt'></i></span>
+        <span class='edit' (click)="update(task)"><i class="fas fa-pen"></i></span>
+        {{task.name}}
+        <span  
+        [class]="task.priority.value">{{task.priority.code}}</span>
+       
+    </li>
+</ul>
+
+
+<script src="script.js"></script>
+
