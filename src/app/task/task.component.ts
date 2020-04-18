@@ -38,6 +38,7 @@ export class TaskComponent implements OnInit{
         });
 
         this.sort(this.tasks);
+        console.log(this.tasks);
         
       });
 
