@@ -63,8 +63,9 @@ export class TaskComponent implements OnInit{
     this.taskService.deleteTask(taskid);
   }
 
-  update(task:Task){
-    this.taskService.updateTask(task);
+  update(task:Task, input:HTMLInputElement){
+    input.value=task.name+' p:'+task.priority.code;
+    this.delete(task.id);
   }
 
   sort(t:Task[]){
