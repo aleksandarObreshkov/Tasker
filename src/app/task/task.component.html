@@ -1,12 +1,13 @@
 
-<input width="45%" type="text" id= "inputTask" placeholder="Add New Todo" #input (keyup.enter)="create(input)">
+<input type="text" id= "inputTask" placeholder="Add New Todo" #input (keyup.enter)="create(input, dateInput)">
+<input type="date" id="date" name="date" #dateInput>
 <ul class="list-group">
     <li *ngFor = "let task of tasks" class='customList'>
         <span class='delete' (click)="delete(task.id)"><i class='far fa-trash-alt'></i></span>
         <span class='edit' (click)="update(task, input)"><i class="fas fa-pen"></i></span>
-        {{task.name}}
+        {{task?.name}}
         <span  
-        [class]="task.priority.value">{{task.priority.code}}</span>
+        [class]="task?.priority.value">{{task?.priority.code}}</span>
        
     </li>
 </ul>

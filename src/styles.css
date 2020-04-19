@@ -24,21 +24,13 @@ ul {
 
 input{
     border: none;
-    width: 90%;
     padding: 13px 13px 13px 20px;
     font-size: 18px;
     box-sizing: border-box;
+    width: 100%;
     color: #2980b9;
 }
 
-.calendar{
-    width: 20%;
-    padding-left: 10px;
-    color: #f7f7f7;
-    font-size: 18px;
-    box-sizing: border-box;
-    color: #2980b9;
-}
 .delete {
     background-color: #e74c3c;
     color: white;

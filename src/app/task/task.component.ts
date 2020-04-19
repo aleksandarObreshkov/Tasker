@@ -23,6 +23,8 @@ export class TaskComponent implements OnInit{
     this.taskService.getTasks()
       .subscribe(data => {
         this.tasks=data.map(e =>{
+
+          
           let p:string;
           switch(e.payload.doc.get('priority.code')){
             case 'u':{p="badge badge-danger";break;}
@@ -35,28 +37,37 @@ export class TaskComponent implements OnInit{
             name:e.payload.doc.get("name"),
             priority:{code:e.payload.doc.get('priority.code'),value:p}
           } as Task;
-        });
+        
+      });
+        
 
         this.sort(this.tasks);
         
         
-      });
+    });
+
 
   }
 
 
-  create(task:HTMLInputElement){
-    let taskPriority:string, nameValue:string;
+  create(task:HTMLInputElement, dateInput:HTMLInputElement){
+    let taskPriority:string, nameValue:string,due:string=dateInput.value;
     try{
       taskPriority=task.value.match("p:([a-z])")[1];
     }catch(e){
       taskPriority='l';
     }
-    nameValue=task.value.match("([a-zA-z]+ [a-zA-z]*) *")[1];
+    nameValue=task.value.match("([a-zA-z ]+)")[1].substring(0,task.value.match("([a-zA-z ]+)")[1].length-1);
 
     
-    this.taskService.createTask({id:task.id,name:nameValue,priority:{code:taskPriority,value:""}});
+    if(due===''){
+      let current=new Date();
+      due=current.getFullYear()+'-'+(current.getMonth()+1)+"-"+current.getDate();
+    }
+    
+    this.taskService.createTask({id:task.id,name:nameValue,priority:{code:taskPriority,value:""},due:due});
     task.value='';
+    dateInput.value='';
   }
 
   delete(taskid:string){

@@ -12,18 +12,15 @@ $("ul").on("click","i",function(event){
 });
 
 $("#inputTask").on("keypress",function(event){
+    
     if(event.which == "13"){
         var value = $(this).val();
         $(this).val("");
         $("ul").append("<li><span class='delete'><i class='far fa-trash-alt'></i></span> " + value + "<span class='badge badge-primary'>Primary</span></li>");
-
+        
     }
 });
 $("i").on("click",function(){
      
     $("input").fadeToggle();
-});
-
-$(".form_datetime").datetimepicker({
-    format: "dd MM yyyy - hh:ii"
 });
