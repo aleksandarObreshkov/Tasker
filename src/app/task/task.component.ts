@@ -20,11 +20,17 @@ export class TaskComponent implements OnInit{
 
   ngOnInit(): void {
 
+    let current=new Date();
+    let month:string=current.getMonth()+1+"";
+    if(current.getMonth()+1<10)month="0"+month;
+    
+    let today=current.getFullYear()+'-'+(month)+"-"+current.getDate();
+
     this.taskService.getTasks()
       .subscribe(data => {
         this.tasks=data.map(e =>{
 
-          
+          if(today===e.payload.doc.get("due")){
           let p:string;
           switch(e.payload.doc.get('priority.code')){
             case 'u':{p="badge badge-danger";break;}
@@ -35,15 +41,16 @@ export class TaskComponent implements OnInit{
           return {
             id:e.payload.doc.id,
             name:e.payload.doc.get("name"),
-            priority:{code:e.payload.doc.get('priority.code'),value:p}
+            priority:{code:e.payload.doc.get('priority.code'),value:p},
+            due:e.payload.doc.get("due")
           } as Task;
+        }
+       
         
       });
         
 
         this.sort(this.tasks);
-        
-        
     });
 
 
@@ -61,13 +68,17 @@ export class TaskComponent implements OnInit{
 
     
     if(due===''){
-      let current=new Date();
-      due=current.getFullYear()+'-'+(current.getMonth()+1)+"-"+current.getDate();
+    let current=new Date();
+    let month:string=current.getMonth()+1+"";
+    if(current.getMonth()+1<10)month="0"+month;
+    due=current.getFullYear()+'-'+(month)+"-"+current.getDate();
     }
-    
-    this.taskService.createTask({id:task.id,name:nameValue,priority:{code:taskPriority,value:""},due:due});
+    let newTask:Task={id:task.id,name:nameValue,priority:{code:taskPriority,value:""},due:due};
+    this.taskService.createTask(newTask);
     task.value='';
     dateInput.value='';
+
+    
   }
 
   delete(taskid:string){
@@ -105,6 +116,10 @@ export class TaskComponent implements OnInit{
         return (tempA>tempB) ? 1: -1;
       }
     });
+  }
+
+  isUndefined(){
+    return this.tasks===undefined ? 1 : -1;
   }
 
 
