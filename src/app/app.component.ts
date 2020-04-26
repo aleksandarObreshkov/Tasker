@@ -1,4 +1,4 @@
-import { Component, OnDestroy, ɵConsole } from '@angular/core';
+import { Component, OnDestroy, ɵConsole, OnInit } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { Subscription } from 'rxjs';
 import { TaskComponent } from './task/task.component';
@@ -8,10 +8,15 @@ import { TaskComponent } from './task/task.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   
-  
+  authenticated:boolean;
   
   constructor() { }
+
+  ngOnInit(){
+    this.authenticated=false;
+    alert("User not authenticated");
+  }
   
 }

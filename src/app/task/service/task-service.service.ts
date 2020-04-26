@@ -8,22 +8,23 @@ import { Task } from '../model/task.model';
 })
 export class TaskService {
 
-  constructor(private firestore: AngularFirestore) { }
+  email="aleks.yasuo@gmail.com";
+  constructor(private firestore: AngularFirestore) {}
 
   getTasks(){
-    return this.firestore.collection('tasks').snapshotChanges();
+    return this.firestore.collection(this.email).snapshotChanges();
   }
 
   createTask(task: Task){
-    return this.firestore.collection('tasks').add(task);
+    return this.firestore.collection(this.email).add(task);
   }
 
   updateTask(task: Task){
     delete task.id;
-    this.firestore.doc('tasks/'+task.id).update(task);  
+    this.firestore.doc(this.email+'/'+task.id).update(task);  
   }
 
   deleteTask(taskId:string){
-    this.firestore.doc('tasks/'+taskId).delete();
+    this.firestore.doc(this.email+'/'+taskId).delete();
   }
 }
