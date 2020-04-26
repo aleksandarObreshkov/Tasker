@@ -16,8 +16,14 @@
 <body>
     
     <div class="container">
+        <div *ngIf="authenticated">
         <h1 id = heading>TO-DO LIST <i class="fas fa-plus"></i></h1>
         <task></task>
+        </div>
+
+        <div *ngIf="!authenticated">
+            <login></login>
+        </div>
         
     </div>
     

@@ -16,7 +16,6 @@ export class AppComponent implements OnInit{
 
   ngOnInit(){
     this.authenticated=false;
-    alert("User not authenticated");
   }
   
 }

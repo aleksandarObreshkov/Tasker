@@ -17,6 +17,7 @@ import * as firebase from 'firebase';
 import { TaskComponent } from './task/task.component';
 import { TaskService } from './task/service/task-service.service';
 import { Task } from './task/model/task.model';
+import { LoginComponent } from './login/login.component';
 
 const config={
     apiKey: "AIzaSyCapnqfLUSo1dfGWTvdkIM9voPeq-64_vY",
@@ -31,7 +32,8 @@ const config={
 @NgModule({
   declarations: [
     AppComponent,
-    TaskComponent
+    TaskComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
