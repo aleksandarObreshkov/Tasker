@@ -20,6 +20,8 @@ export class TaskComponent implements OnInit{
 
   ngOnInit(): void {
 
+    console.log("Task component init-ed");
+
     let current=new Date();
     let month:string=current.getMonth()+1+"";
     if(current.getMonth()+1<10)month="0"+month;
