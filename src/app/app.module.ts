@@ -7,17 +7,16 @@ import { AngularFireDatabase} from '@angular/fire/database';
 // for AngularFireAuth
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireAuth } from '@angular/fire/auth';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { environment } from 'src/environments/environment';
-import * as firebase from 'firebase';
 import { TaskComponent } from './task/task.component';
-import { TaskService } from './task/service/task-service.service';
-import { Task } from './task/model/task.model';
 import { LoginComponent } from './login/login.component';
+import {Route, RouterModule } from '@angular/router';
+import {ReactiveFormsModule} from '@angular/forms';
 
 const config={
     apiKey: "AIzaSyCapnqfLUSo1dfGWTvdkIM9voPeq-64_vY",
@@ -29,6 +28,13 @@ const config={
     appId: "1:594553417185:web:0c7cf74cf3dec63758f6a0"
 }
 
+const ROUTES:Route[]=[
+  {path:'',component:TaskComponent},
+  {path:'login', component:LoginComponent}
+]
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +45,11 @@ const config={
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(config),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    RouterModule.forRoot(ROUTES),
+    ReactiveFormsModule
   ],
   providers: [LoginComponent],
   bootstrap: [AppComponent]

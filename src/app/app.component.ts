@@ -3,6 +3,7 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { Subscription } from 'rxjs';
 import { TaskComponent } from './task/task.component';
 import { LoginComponent } from './login/login.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -20,5 +21,7 @@ export class AppComponent implements OnInit{
   ngOnInit(){
     console.log("App component init-ed");
   }
+
+
   
 }

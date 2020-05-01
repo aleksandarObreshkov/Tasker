@@ -1,3 +1,8 @@
+<h1 id = heading>LOGIN</h1>
+<form [formGroup]="registerForm">
 <div class="form-group">
-    <input class="form-control" #input (keyup.enter)="onEnter(input)">
+    <input class="form-control" #email type="email">
+    <input class="form-control" #pass type="password">
 </div>
+<button class="btn btn-primary" (click)="doSignIn(registerForm.value)">Sign In</button>
+</form>
